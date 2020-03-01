@@ -1,5 +1,9 @@
 #!/bin/sh
 
+set -e
+
+DOTNET_CLI_HOME=/tmp
+
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
 add-apt-repository universe -y
