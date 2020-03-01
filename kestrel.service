@@ -1,0 +1,19 @@
+# kestrel.service
+
+[Unit]
+Description=Ketrel Service
+
+[Service]
+WorkingDirectory=/var/www/kestrel
+ExecStart=AspNetCoreTest
+
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=kestrel
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target
