@@ -4,7 +4,7 @@
 Description=Ketrel Service
 
 [Service]
-WorkingDirectory=/var/www/kestrel
+WorkingDirectory=/var/www
 ExecStart=AspNetCoreTest
 
 Restart=always
