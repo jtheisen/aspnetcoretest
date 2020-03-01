@@ -8,8 +8,8 @@ runcmd:
   - apt-get update -y
   - apt-get install dotnet-sdk-3.1 -y
   - cd var
-  - git clone https://github.com/jtheisen/aspnetcoretest.git www
-  - cd www
-  - cp kestrel.service /etc/systemd/system/kestrel.service
-  - dotnet publish --configuration Release
-  - cd bin/Release/netcoreapp3.1
+  - git clone https://github.com/jtheisen/aspnetcoretest.git www-src
+  - cd www-src
+  - dotnet publish --configuration Release -o /var/www
+  - cp scripts/kestrel.service /etc/systemd/system/kestrel.service
+  - systemctl --now enable kestrel

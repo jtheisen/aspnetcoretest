@@ -5,7 +5,7 @@ Description=Ketrel Service
 
 [Service]
 WorkingDirectory=/var/www
-ExecStart=AspNetCoreTest
+ExecStart=/var/www/AspNetCoreTest
 
 Restart=always
 RestartSec=10

@@ -1,3 +1,5 @@
+# Largely ported from
+# https://davemateer.com/2020/01/09/Publishing-ASP-NET-Core-3-App-to-Ubuntu
 
 function Init-Boilerplate {
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
