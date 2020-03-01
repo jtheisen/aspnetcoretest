@@ -8,6 +8,8 @@ apt-get install apt-transport-https -y
 apt-get update -y
 apt-get install dotnet-sdk-3.1 -y
 cd /var/www-src
+echo "About to compile"
 dotnet publish --configuration Release -o /var/www
+echo "Compiling done"
 cp scripts/kestrel.service /etc/systemd/system/kestrel.service
 systemctl --now enable kestrel

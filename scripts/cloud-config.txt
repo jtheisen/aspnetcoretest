@@ -3,3 +3,4 @@ runcmd:
   - echo "Hello from user-data"
   - git clone https://github.com/jtheisen/aspnetcoretest.git /var/www-src
   - sh /var/www-src/scripts/init.sh
+  - echo "Bye from user-data"
