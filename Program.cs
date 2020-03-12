@@ -22,7 +22,7 @@ namespace AspNetCoreTest
                 {
                     webBuilder.ConfigureKestrel(serverOptions =>
                     {
-                        serverOptions.ListenAnyIP(80);
+                        //serverOptions.ListenAnyIP(80);
                         serverOptions.ListenAnyIP(443, listenOptions => listenOptions.UseHttps("certificate.pfx"));
                     });
 
