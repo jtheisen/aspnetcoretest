@@ -20,6 +20,12 @@ namespace AspNetCoreTest
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.ConfigureKestrel(serverOptions =>
+                    {
+                        serverOptions.ListenAnyIP(80);
+                        serverOptions.ListenAnyIP(443, listenOptions => listenOptions.UseHttps("certificate.pfx"));
+                    });
+
                     webBuilder.UseStartup<Startup>();
                 });
     }
